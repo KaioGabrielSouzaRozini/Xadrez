@@ -60,6 +60,7 @@ export class Peca {
 
   dragOver(e) {
     e.preventDefault();
+    console.log(e);
   }
   dropEvent(e, quadrado) {
     e.preventDefault();
@@ -1928,6 +1929,7 @@ export class Rainha extends Peca {
         jogadaPossivel1 = false;
         jogadaPossivel2 = false;
       }
+
       if (
         (divInicialY == divFinalY1 &&
           divInicialX == divFinalX1 &&
