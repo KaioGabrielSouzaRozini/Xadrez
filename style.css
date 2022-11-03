@@ -1,0 +1,120 @@
+body {
+  background-color: #fdd196;
+  color: black;
+  justify-content: space-evenly;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#tabuleiro {
+  width: 1024px;
+  height: 1024px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.cabecalho {
+  width: 65%;
+  justify-content: center;
+}
+.quadrado {
+  width: 128px;
+  height: 128px;
+
+  display: flex;
+  align-items: center;
+
+  justify-content: space-evenly;
+}
+.container {
+  width: 1024px;
+  height: 1024px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+img {
+  width: 128px;
+  height: 128px;
+}
+
+img:hover {
+  background-color: lightgreen;
+}
+
+.quadradoMarrom {
+  background-color: #69463d;
+}
+.quadradoPastel {
+  background-color: #fbc482;
+}
+
+.quadradoMarrom:hover {
+  background-color: rgb(252, 94, 94);
+}
+.quadradoPastel:hover {
+  background-color: rgb(252, 94, 94);
+}
+
+.total {
+  display: flex;
+}
+
+div {
+  display: flexbox;
+  justify-content: space-evenly;
+}
+label {
+  font-size: 40px;
+}
+button {
+  height: 70px;
+  width: 400px;
+  background-color: white;
+  color: black;
+  border: 4px solid #69463d;
+  border-radius: 0.8rem;
+  font-size: 30px;
+  margin: 30px;
+  margin-left: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+button:hover {
+  background-color: #69463d;
+  color: white;
+}
+input {
+  height: 50px;
+  width: 300px;
+  background-color: white;
+  color: black;
+  border: 4px solid #69463d;
+  border-radius: 0.8rem;
+  font-size: 25px;
+  margin: 10px;
+}
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 40px;
+}
+#header {
+  display: center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: 20px;
+}

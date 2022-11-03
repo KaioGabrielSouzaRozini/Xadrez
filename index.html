@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./index.js" type="module" defer></script>
+    <script src="./main.js" type="module" defer></script>
+    <title>Xadrez</title>
+  </head>
+  <body>
+    <div class="cabecalho">
+      <header id="header">
+        <h1>Jogo da velha</h1>
+        <label for="player1">jogador 1:</label>
+        <input name="player1" id="player1" type="text" />
+        <label for="player2">jogador 2:</label>
+        <input name="player2" id="player2" type="text" />
+        <button id="disable">Salvar jogadores</button>
+      </header>
+      <h1>Jogadores</h1>
+      <ul id="players"></ul>
+      <h1 id="vez">Vez do jogador: 1</h1>
+    </div>
+    <div class="total">
+      <div id="container">
+        <div id="tabuleiro"></div>
+      </div>
+
+      <div id="pecas-pretas-mortas">
+        <h1 id="pontos-preta">Pontuação pretas:</h1>
+      </div>
+      <div id="pecas-brancas-mortas">
+        <h1 id="pontos-branco">Pontuação brancas:</h1>
+      </div>
+    </div>
+  </body>
+</html>
