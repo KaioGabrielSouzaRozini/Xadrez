@@ -808,6 +808,10 @@ export class Torre extends Peca {
       } else {
         jogadaPossivel3 = true;
       }
+      if (divFinal == divInicial) {
+        jogadaPossivel1 = false;
+        jogadaPossivel2 = false;
+      }
 
       if (divInicialY == divFinalY && jogadaPossivel1 && jogadaPossivel2) {
         if (quadrado.children.length > 0) {
@@ -1920,7 +1924,10 @@ export class Rainha extends Peca {
           jogadaPossivel2 = true;
         }
       }
-
+      if (divFinal == divInicial) {
+        jogadaPossivel1 = false;
+        jogadaPossivel2 = false;
+      }
       if (
         (divInicialY == divFinalY1 &&
           divInicialX == divFinalX1 &&
