@@ -1,4 +1,4 @@
-import { testaImparPar } from "./main.js";
+import { testaImparPar, audio } from "./main.js";
 var jogadasReiPreto = 0;
 var jogadasReiBranco = 0;
 
@@ -265,6 +265,7 @@ export class Peao extends Peca {
       ) {
         if (this.cor == "preto") {
           if (quadrado.id.slice(0, 2) == "i0") {
+            audio.play();
             do {
               var escolha = prompt(`escolha a peça que deseja:
             1) Rainha
@@ -334,6 +335,7 @@ export class Peao extends Peca {
           }
         } else if (this.cor == "branco") {
           if (quadrado.id.slice(0, 2) == "i7") {
+            audio.play();
             do {
               var escolha = prompt(`escolha a peça que deseja:
             1) Rainha
@@ -413,10 +415,12 @@ export class Peao extends Peca {
 
         quadrado.appendChild(img);
         this.primeiraJogada = false;
+        audio.play();
         testaImparPar();
       } else if (mata && jogadaPossivel1) {
         if (this.cor == "preto") {
           if (quadrado.id.slice(0, 2) == "i0") {
+            audio.play();
             do {
               var escolha = prompt(`escolha a peça que deseja:
           1) Rainha
@@ -564,7 +568,6 @@ export class Peao extends Peca {
               if (quadrado.firstChild.name.includes("rei")) {
                 var branco = "branco";
                 this.ganhou(branco);
-                console.log(this);
               }
               pecasMortas.appendChild(quadrado.firstChild);
             }
@@ -591,6 +594,7 @@ export class Peao extends Peca {
 
         quadrado.appendChild(img);
         this.primeiraJogada = false;
+        audio.play();
         testaImparPar();
       } else {
         var img = document.createElement("img");
@@ -861,6 +865,7 @@ export class Torre extends Peca {
 
         quadrado.appendChild(img);
         this.jogadaPossivel5 = false;
+        audio.play();
         testaImparPar();
       } else if (
         divInicialX == divFinalX &&
@@ -904,6 +909,7 @@ export class Torre extends Peca {
 
         quadrado.appendChild(img);
         this.jogadaPossivel5 = false;
+        audio.play();
         testaImparPar();
       } else if (
         (this.cor == "preto" &&
@@ -922,6 +928,7 @@ export class Torre extends Peca {
           jogadasReiPreto == 0)
       ) {
         testaImparPar();
+        audio.play();
         var img = document.createElement("img");
         img.setAttribute("draggable", false);
         img.setAttribute("class", `item preto`);
@@ -953,6 +960,7 @@ export class Torre extends Peca {
           jogadasReiBranco == 0)
       ) {
         testaImparPar();
+        audio.play();
         var img = document.createElement("img");
         img.setAttribute("draggable", false);
         img.setAttribute("class", `item branco`);
@@ -1317,6 +1325,7 @@ export class Bispo extends Peca {
         img.addEventListener("dragstart", this.moving);
 
         quadrado.appendChild(img);
+        audio.play();
         testaImparPar();
       } else {
         var img = document.createElement("img");
@@ -1498,6 +1507,7 @@ export class Cavalo extends Peca {
         img.addEventListener("dragstart", this.moving);
 
         quadrado.appendChild(img);
+        audio.play();
         testaImparPar();
       } else {
         var img = document.createElement("img");
@@ -1649,6 +1659,7 @@ export class Rei extends Peca {
         } else if ((this.cor = "branco")) {
           jogadasReiBranco += 1;
         }
+        audio.play();
         testaImparPar();
       } else {
         var img = document.createElement("img");
@@ -2081,6 +2092,7 @@ export class Rainha extends Peca {
         img.addEventListener("dragstart", this.moving);
 
         quadrado.appendChild(img);
+        audio.play();
         testaImparPar();
       } else if (
         divInicialY == divFinalY &&
@@ -2125,6 +2137,7 @@ export class Rainha extends Peca {
         img.addEventListener("dragstart", this.moving);
 
         quadrado.appendChild(img);
+        audio.play();
         testaImparPar();
       } else if (
         divInicialX == divFinalX &&
@@ -2169,6 +2182,7 @@ export class Rainha extends Peca {
         img.addEventListener("dragstart", this.moving);
 
         quadrado.appendChild(img);
+        audio.play();
         testaImparPar();
       } else {
         var img = document.createElement("img");
