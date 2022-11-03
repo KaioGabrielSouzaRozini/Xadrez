@@ -1,4 +1,4 @@
-import { testaImparPar, audio } from "./main.js";
+import { testaImparPar, audio, audioMata } from "./main.js";
 var jogadasReiPreto = 0;
 var jogadasReiBranco = 0;
 
@@ -420,7 +420,7 @@ export class Peao extends Peca {
       } else if (mata && jogadaPossivel1) {
         if (this.cor == "preto") {
           if (quadrado.id.slice(0, 2) == "i0") {
-            audio.play();
+            audioMata.play();
             do {
               var escolha = prompt(`escolha a peça que deseja:
           1) Rainha
@@ -490,6 +490,7 @@ export class Peao extends Peca {
           }
         } else if (this.cor == "branco") {
           if (quadrado.id.slice(0, 2) == "i7") {
+            audioMata.play();
             do {
               var escolha = prompt(`escolha a peça que deseja:
           1) Rainha
@@ -563,12 +564,12 @@ export class Peao extends Peca {
             if (this.cor == "preto") {
             } else {
               var pecasMortas = document.getElementById("pecas-brancas-mortas");
-
               quadrado.firstChild.draggable = false;
               if (quadrado.firstChild.name.includes("rei")) {
                 var branco = "branco";
                 this.ganhou(branco);
               }
+              audioMata.play();
               pecasMortas.appendChild(quadrado.firstChild);
             }
           } else {
@@ -580,6 +581,7 @@ export class Peao extends Peca {
                 this.ganhou(preto);
               }
               quadrado.firstChild.draggable = false;
+              audioMata.play();
               pecasMortas.appendChild(quadrado.firstChild);
             }
           }
@@ -594,7 +596,7 @@ export class Peao extends Peca {
 
         quadrado.appendChild(img);
         this.primeiraJogada = false;
-        audio.play();
+        audioMata.play();
         testaImparPar();
       } else {
         var img = document.createElement("img");
@@ -822,7 +824,6 @@ export class Torre extends Peca {
           if (quadrado.children[0].className.includes("preto")) {
             if (this.cor == "preto") {
               if (quadrado.children[0].name.includes("rei")) {
-                console.log("eae");
                 jogadaPossivel4 = true;
               }
             } else {
@@ -832,9 +833,8 @@ export class Torre extends Peca {
               if (quadrado.firstChild.name.includes("rei")) {
                 var branco = "branco";
                 this.ganhou(branco);
-                console.log(this);
               }
-
+              audioMata.play();
               pecasMortas.appendChild(quadrado.firstChild);
             }
           } else {
@@ -850,6 +850,7 @@ export class Torre extends Peca {
                 this.ganhou(preto);
               }
               quadrado.firstChild.draggable = false;
+              audioMata.play();
               pecasMortas.appendChild(quadrado.firstChild);
             }
           }
@@ -883,6 +884,7 @@ export class Torre extends Peca {
                 var branco = "branco";
                 this.ganhou(branco);
               }
+              audioMata.play();
               pecasMortas.appendChild(quadrado.firstChild);
             }
           } else {
@@ -894,6 +896,7 @@ export class Torre extends Peca {
                 this.ganhou(preto);
               }
               quadrado.firstChild.draggable = false;
+              audioMata.play();
               pecasMortas.appendChild(quadrado.firstChild);
             }
           }
@@ -1300,6 +1303,7 @@ export class Bispo extends Peca {
                 this.ganhou(branco);
                 console.log(this);
               }
+              audioMata.play();
               pecasMortas.appendChild(quadrado.firstChild);
             }
           } else {
@@ -1311,6 +1315,7 @@ export class Bispo extends Peca {
                 this.ganhou(preto);
               }
               quadrado.firstChild.draggable = false;
+              audioMata.play();
               pecasMortas.appendChild(quadrado.firstChild);
             }
           }
@@ -1482,6 +1487,7 @@ export class Cavalo extends Peca {
                 this.ganhou(branco);
                 console.log(this);
               }
+              audioMata.play();
               pecasMortas.appendChild(quadrado.firstChild);
             }
           } else {
@@ -1493,6 +1499,7 @@ export class Cavalo extends Peca {
                 this.ganhou(preto);
               }
               quadrado.firstChild.draggable = false;
+              audioMata.play();
               pecasMortas.appendChild(quadrado.firstChild);
             }
           }
@@ -1629,6 +1636,7 @@ export class Rei extends Peca {
                 this.ganhou(branco);
                 console.log(this);
               }
+              audioMata.play();
               pecasMortas.appendChild(quadrado.firstChild);
             }
           } else {
@@ -1640,6 +1648,7 @@ export class Rei extends Peca {
                 this.ganhou(preto);
               }
               quadrado.firstChild.draggable = false;
+              audioMata.play();
               pecasMortas.appendChild(quadrado.firstChild);
             }
           }
@@ -2066,6 +2075,7 @@ export class Rainha extends Peca {
                 this.ganhou(branco);
                 console.log(this);
               }
+              audioMata.play();
               pecasMortas.appendChild(quadrado.firstChild);
             }
           } else {
@@ -2077,6 +2087,7 @@ export class Rainha extends Peca {
                 this.ganhou(preto);
               }
               quadrado.firstChild.draggable = false;
+              audioMata.play();
               pecasMortas.appendChild(quadrado.firstChild);
             }
           }
@@ -2111,6 +2122,7 @@ export class Rainha extends Peca {
                 this.ganhou(branco);
                 console.log(this);
               }
+              audioMata.play();
               pecasMortas.appendChild(quadrado.firstChild);
             }
           } else {
@@ -2122,6 +2134,7 @@ export class Rainha extends Peca {
                 this.ganhou(preto);
               }
               quadrado.firstChild.draggable = false;
+              audioMata.play();
               pecasMortas.appendChild(quadrado.firstChild);
             }
           }
@@ -2156,6 +2169,7 @@ export class Rainha extends Peca {
                 this.ganhou(branco);
                 console.log(this);
               }
+              audioMata.play();
               pecasMortas.appendChild(quadrado.firstChild);
             }
           } else {
@@ -2167,6 +2181,7 @@ export class Rainha extends Peca {
                 this.ganhou(preto);
               }
               quadrado.firstChild.draggable = false;
+              audioMata.play();
               pecasMortas.appendChild(quadrado.firstChild);
             }
           }

@@ -1,5 +1,6 @@
 import { Peao, Torre, Rainha, Rei, Cavalo, Bispo } from "/index.js";
 export const audio = new Audio("./sons/move-self.mp3");
+export const audioMata = new Audio("./sons/capture.mp3");
 
 var tabuleiroDOM = document.getElementById("tabuleiro");
 var index = 1;
