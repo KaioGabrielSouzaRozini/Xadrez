@@ -60,7 +60,6 @@ export class Peca {
 
   dragOver(e) {
     e.preventDefault();
-    console.log(e);
   }
   dropEvent(e, quadrado) {
     e.preventDefault();
