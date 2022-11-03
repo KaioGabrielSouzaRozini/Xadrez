@@ -931,6 +931,7 @@ export class Torre extends Peca {
         var quadradoAntigo = document.getElementById(`${divInicial}`);
         quadradoAntigo.appendChild(quadrado.firstChild);
         this.jogadaPossivel5 = false;
+        jogadasReiPreto += 1;
       } else if (
         (this.cor == "branco" &&
           divInicialX == divFinalX &&
@@ -938,14 +939,14 @@ export class Torre extends Peca {
           jogadaPossivel2 &&
           jogadaPossivel3 &&
           this.jogadaPossivel5 &&
-          jogadasReiPreto == 0) ||
+          jogadasReiBranco == 0) ||
         (this.cor == "branco" &&
           divInicialY == divFinalY &&
           jogadaPossivel4 &&
           jogadaPossivel2 &&
           jogadaPossivel3 &&
           this.jogadaPossivel5 &&
-          jogadasReiPreto == 0)
+          jogadasReiBranco == 0)
       ) {
         testaImparPar();
         var img = document.createElement("img");
@@ -961,6 +962,8 @@ export class Torre extends Peca {
         var quadradoAntigo = document.getElementById(`${divInicial}`);
         quadradoAntigo.appendChild(quadrado.firstChild);
         this.jogadaPossivel5 = false;
+
+        jogadasReiBranco += 1;
       } else {
         var img = document.createElement("img");
         img.setAttribute("draggable", true);
